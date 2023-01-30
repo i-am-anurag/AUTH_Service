@@ -6,7 +6,7 @@ const create = async(req, res) => {
     try {
         const response = await userService.create({
             email: req.body.email,
-            Password: req.body.Password,
+            Password: req.body.password,
         });
 
         return res.status(201).json({
@@ -48,7 +48,7 @@ const deleteUser = async(req, res) => {
 
 const signIn = async (req, res) =>{
     try {
-        const response = await userService.signIn(req.body.email,req.body.Password);
+        const response = await userService.signIn(req.body.email,req.body.password);
         console.log(response);
         return res.status(201).json({
             data: response,
