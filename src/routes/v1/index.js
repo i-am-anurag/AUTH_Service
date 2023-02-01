@@ -12,4 +12,6 @@ AuthRequestValidator.AuthValidator,
 UserController.signIn);
 
 router.delete('/delete',UserController.deleteUser);
+
+router.get('/isAuthenticated',UserController.isAuthenticated);
 module.exports = router;
