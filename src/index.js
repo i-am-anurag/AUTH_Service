@@ -33,7 +33,7 @@ const prepareandStartServer = () =>{
 
         // u1.addRole(r1);
         
-        const response = await u1.getUser();
+        const response = await u1.hasRole(r1);
         console.log(response);
     });
 }

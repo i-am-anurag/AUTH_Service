@@ -104,6 +104,17 @@ class UserService
             throw error;          
         } 
     }
+
+    isAdmin(userId){
+        try {
+            const response = this.userRepository.isAdmin(userId);
+            console.log("Usser respose is:",response);
+            return response;
+        } catch (error) {
+            console.log(`Something went wrong in service layer in admin validation: ${error}`);
+            throw error;
+        }        
+    }
 }
 
 module.exports = UserService;

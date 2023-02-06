@@ -14,4 +14,7 @@ UserController.signIn);
 router.delete('/delete',UserController.deleteUser);
 
 router.get('/isAuthenticated',UserController.isAuthenticated);
+
+router.get('/isAdmin',AuthRequestValidator.validateisAdminRequest
+,UserController.isAdmin);
 module.exports = router;

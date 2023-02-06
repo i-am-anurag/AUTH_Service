@@ -90,9 +90,29 @@ const signIn = async (req, res) =>{
     }
 }
 
+const isAdmin = async(req, res)=>{
+    try {
+        const response = await userService.isAdmin(req.body.id);
+        return res.status(200).json({
+            data: response,
+            success: true,
+            message: 'Sucessfully fetch user is Admin OR not ',
+            err:{},
+        })
+    } catch (error) {
+        return res.status(500).json({
+            data: {},
+            success: false,
+            message: 'Something went wrong for admin validation',
+            err:{},
+        })
+    }
+}
+
 module.exports = {
     create,
     signIn,
     deleteUser,
     isAuthenticated,
+    isAdmin,
 }
