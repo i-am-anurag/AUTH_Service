@@ -26,5 +26,6 @@ const validateisAdminRequest = (req, res, next) => {
 }
 module.exports = {
     AuthValidator,
-    validateisAdminRequest
+    validateisAdminRequest,
+    
 }
